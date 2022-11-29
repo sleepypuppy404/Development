@@ -1,7 +1,7 @@
 # Development
 
 ### Link to Deployed Website
-If you used the stencil code, this is `https://<your GitHub username>.github.io/<name of your repository>`
+sleepypuppy404.github.io/Development/
 
 ### Goal and Value of the Application
 The goal is to make planning puppy adoption easier on users. When I first adopted my dog, I had plenty of questions about the exact information on the dog. Would they be a good
