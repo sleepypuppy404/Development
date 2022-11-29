@@ -4,15 +4,17 @@ import { useState } from "react";
 import puppyData from "./assets/puppy-data.json";
 import { Checkbox, FormGroup, FormControl, FormLabel, RadioGroup, Radio, FormControlLabel, Slider} from '@mui/material';
 import PuppyItem from "./components/PuppyItem";
+import CartItem from "./components/CartItem";
 
 puppyData.forEach((item) => {
   item.image = process.env.PUBLIC_URL + "/" + item.image;
 });
-
+var info = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 function App() {
   const [tracker, setVal] = useState([0, 6000]);
   const [breedSort, bSVal] = useState(0);
   const [otherFilt, otherFiltSet] = useState(0);
+  const [family, incFam] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const updateRange = (e, data) => {
     setVal(data);
   };
@@ -37,7 +39,15 @@ function App() {
   const mbf = (e, data) => {
     otherFiltSet(3);
   };
-
+  function handleInc(ind) {
+    var acopy = family;
+    acopy[ind] = acopy[ind] + 1;
+    incFam(acopy);
+  }
+  const [tp, setIndex] = useState(0);
+  function handleNextClick(val) {
+    setIndex(tp + val);
+  }
   var data = puppyData;
   data = data.filter((item) => {
     return item.price_min <= tracker[1] && item.price_max >= tracker[0];
@@ -60,7 +70,7 @@ function App() {
           return b.price_max - a.price_max;
         }})
   };
-
+  var test = family;
   return (
     <div className="App" style={{marginLeft:"0px"}}>
       <h1>Puppy Household Planner</h1>
@@ -106,12 +116,16 @@ function App() {
           valueLabelDisplay="auto"
         />
       </div>
-      <div class="div-1" style={{marginLeft: "0px", display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
-        {data.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
-          <div>
-              {PuppyItem(item, index, item.image)}
-          </div>
-        ))}
+      <div class = "div-box" style={{display: "flex"}}>
+        <div class="div-1" style={{marginLeft: "0px", display: "flex", flexDirection: "row", flexWrap: "wrap", width: "66%"}}>
+          {data.map((item, index) => ( // TODO: map puppyData to puppyData components
+            <div style={{border: '1px solid red', width: "20vw", height: "30vw"}}>
+                {PuppyItem(item, index, item.image)}
+                <br></br>
+                <button onClick={() => {handleNextClick(index); handleInc(index)}}>Add to Family</button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
