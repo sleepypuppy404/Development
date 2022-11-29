@@ -1,0 +1,111 @@
+[
+    {
+      "name": "Goldendoodle",
+      "price_min": 1500,
+      "price_max": 5000,
+      "activity_level": 30,
+      "friendliness": 10,
+      "type": "Cross Breed",
+      "image": "images/doodle.jpg"
+    },
+    {
+        "name": "Labrador Retriever",
+        "price_min": 700,
+        "price_max": 1500,
+        "activity_level": 60,
+        "friendliness": 8,
+        "type": "Pure Breed",
+        "image": "images/lab.jpg"
+    },
+    {
+        "name": "French Bulldog",
+        "price_min": 1500,
+        "price_max": 3000,
+        "activity_level": 10,
+        "friendliness": 9,
+        "type": "Pure Breed",
+        "image": "images/French_Bulldog.jpg"
+    },
+    {
+        "name": "German Shepherd",
+        "price_min": 1500,
+        "price_max": 3000,
+        "activity_level": 120,
+        "friendliness": 4,
+        "type": "Pure Breed",
+        "image": "images/German_Shepherd.jpg"
+    },
+    {
+        "name": "Alaskan Husky",
+        "price_min": 1000,
+        "price_max": 1500,
+        "activity_level": 80,
+        "friendliness": 7,
+        "type": "Cross Breed",
+        "image": "images/Alaskan Husky.jpeg"
+    },
+    {
+        "name": "Tibetan Mastiff",
+        "price_min": 4500,
+        "price_max": 6000,
+        "activity_level": 60,
+        "friendliness": 2,
+        "type": "Pure Breed",
+        "image": "images/mastiff.jpg"
+      },
+      {
+          "name": "Shiba Inu",
+          "price_min": 1400,
+          "price_max": 2200,
+          "activity_level": 75,
+          "friendliness": 5,
+          "type": "Pure Breed",
+          "image": "images/shiba.png"
+      },
+      {
+          "name": "Pembroke Welsh Corgi",
+          "price_min": 1500,
+          "price_max": 2000,
+          "activity_level": 45,
+          "friendliness": 6,
+          "type": "Pure Breed",
+          "image": "images/Welsh_Corgi.jpg"
+      },
+      {
+          "name": "Tibetan Spaniel",
+          "price_min": 3000,
+          "price_max": 4500,
+          "activity_level": 15,
+          "friendliness": 7,
+          "type": "Pure Breed",
+          "image": "images/Tibetan_Spaniel.jpg"
+      },
+      {
+          "name": "Jack-A-Poo",
+          "price_min": 500,
+          "price_max": 750,
+          "activity_level": 120,
+          "friendliness": 7,
+          "type": "Cross Breed",
+          "image": "images/Jackapoo.jpg"
+      },
+      {
+        "name": "Cavachon",
+        "price_min": 2000,
+        "price_max": 6000,
+        "activity_level": 30,
+        "friendliness": 7,
+        "type": "Cross Breed",
+        "image": "images/cavachon.jpg"
+    },
+    {
+        "name": "Border Collie",
+        "price_min": 800,
+        "price_max": 1500,
+        "activity_level": 180,
+        "friendliness": 9,
+        "type": "Pure Breed",
+        "image": "images/collie.jpg"
+    }
+  ]
+  

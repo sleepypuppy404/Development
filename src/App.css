@@ -12,7 +12,13 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.sortBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+  margin-left: 20px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
