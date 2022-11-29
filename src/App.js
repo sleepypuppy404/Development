@@ -6,6 +6,7 @@ import { Checkbox, FormGroup, FormControl, FormLabel, RadioGroup, Radio, FormCon
 import PuppyItem from "./components/PuppyItem";
 import CartItem from "./components/CartItem";
 import { render } from 'react-dom';
+import { textAlign } from '@mui/system';
 
 puppyData.forEach((item) => {
   item.image = process.env.PUBLIC_URL + "/" + item.image;
@@ -94,7 +95,9 @@ function App() {
   }
   return (
     <div className="App" style={{marginLeft:"0px"}}>
-      <h1>Puppy Household Planner</h1>
+      <div style={{border: '5px solid red', borderRadius: "2px", width: "25%", textAlign:"center", marginLeft: "37%", marginRight: "50%"}}>
+        <h1>Puppy Household Planner</h1>
+      </div>
       <br></br>
       <div className = "sortBox">
         <FormControl>
@@ -143,7 +146,7 @@ function App() {
       <div class = "div-box" style={{display: "flex"}}>
         <div class="div-1" style={{marginLeft: "0px", display: "flex", flexDirection: "row", flexWrap: "wrap", width: "66%"}}>
           {data.map((item, index) => ( // TODO: map puppyData to puppyData components
-            <div style={{border: '1px solid red', width: "20vw", height: "30vw"}}>
+            <div style={{border: '5px solid red', width: "20vw", height: "30vw"}}>
                 {PuppyItem(item[0])}
                 <br></br>
                 <button onClick={() => {handleInc(item)}}>Add to Family</button>
@@ -151,11 +154,12 @@ function App() {
           ))}
         </div>
         <div>
-        <div style={{border: '1px solid red', width: "20vw", height: "37vw"}}>
+        <div style={{border: '5px solid red', borderRadius: "2px", width: "20vw", height: "37vw"}}>
             <h3>Puppy Numbers</h3>
             {family_data.map((item) => 
             <div>
-              {puppyData[item[1]].name +"s :" + item[0]} <button onClick={() => {handleDec(item)}}>-</button>
+              <button onClick={() => {handleInc(item)}}>+</button>
+              {" " + puppyData[item[1]].name +"s :" + item[0]} <button onClick={() => {handleDec(item)}}>-</button>
             </div>)}
             <p>Approximate Cost: ${approx_cost}</p>
             <p>Average Friendliness: {friendliness.toFixed(2)}</p>
