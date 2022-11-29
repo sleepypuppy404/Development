@@ -149,7 +149,7 @@ function App() {
             <div style={{border: '5px solid red', width: "20vw", height: "30vw"}}>
                 {PuppyItem(item[0])}
                 <br></br>
-                <button onClick={() => {handleInc(item)}}>Add to Family</button>
+                <button style = {{backgroundColor:"#E3E3E3", border:"3px solid blue", borderRadius:"2px"}} onClick={() => {handleInc(item)}}>Add to Family</button>
             </div>
           ))}
         </div>
@@ -166,7 +166,7 @@ function App() {
             <p>Average Activity: {activity.toFixed(2)}min/day</p>
         </div>
           <div>
-            <button onClick={() => {Clearer()}}>Clear</button>
+            <button style = {{backgroundColor:"#E3E3E3", border:"3px solid blue", borderRadius:"2px"}} onClick={() => {Clearer()}}>Clear</button>
           </div>
         </div>
       </div>
