@@ -2,7 +2,7 @@ import { alignProperty } from "@mui/material/styles/cssUtils";
 import { textAlign } from "@mui/system";
 
 // TODO: create a component that displays a single bakery item
-export default function PuppyItem(item, img) {
+export default function PuppyItem(item) {
 	return (
 		<div style={{width: "20vw", height: "26vw"}}>
             <br></br>
