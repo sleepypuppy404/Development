@@ -158,8 +158,8 @@ function App() {
             <h3>Puppy Numbers</h3>
             {family_data.map((item) => 
             <div>
-              <button onClick={() => {handleInc(item)}}>+</button>
-              {" " + puppyData[item[1]].name +"s :" + item[0]} <button onClick={() => {handleDec(item)}}>-</button>
+              <button style = {{fontSize: "1vw"}} onClick={() => {handleInc(item)}}>+</button>
+              {" " + puppyData[item[1]].name +"s :" + item[0]} <button style = {{fontSize: "1vw"}} onClick={() => {handleDec(item)}}>-</button>
             </div>)}
             <p style = {{fontSize: "1vw"}}>Approximate Cost: ${approx_cost}</p>
             <p style = {{fontSize: "1vw"}}>Average Friendliness: {friendliness.toFixed(2)}</p>
