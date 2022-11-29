@@ -154,16 +154,16 @@ function App() {
           ))}
         </div>
         <div>
-        <div style={{border: '5px solid red', borderRadius: "2px", width: "20vw", height: "37vw"}}>
+        <div style={{border: '5px solid red', borderRadius: "2px", width: "20vw", height: "37vw", fontSize: "1vw"}}>
             <h3>Puppy Numbers</h3>
             {family_data.map((item) => 
             <div>
               <button onClick={() => {handleInc(item)}}>+</button>
               {" " + puppyData[item[1]].name +"s :" + item[0]} <button onClick={() => {handleDec(item)}}>-</button>
             </div>)}
-            <p>Approximate Cost: ${approx_cost}</p>
-            <p>Average Friendliness: {friendliness.toFixed(2)}</p>
-            <p>Average Activity: {activity.toFixed(2)}min/day</p>
+            <p style = {{fontSize: "1vw"}}>Approximate Cost: ${approx_cost}</p>
+            <p style = {{fontSize: "1vw"}}>Average Friendliness: {friendliness.toFixed(2)}</p>
+            <p style = {{fontSize: "1vw"}}>Average Activity: {activity.toFixed(2)}min/day</p>
         </div>
           <div>
             <button style = {{backgroundColor:"#E3E3E3", border:"3px solid blue", borderRadius:"2px"}} onClick={() => {Clearer()}}>Clear</button>
